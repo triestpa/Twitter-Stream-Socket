@@ -86,8 +86,7 @@ var client = new Twitter({
 
 client.stream('statuses/filter', {track: 'ISIS'}, function(stream) {
   stream.on('data', function(tweet) {
-    console.log(tweet.text);
-    io.emit('newTweet', tweet.text);
+    io.emit('newTweet', tweet);
   });
   stream.on('error', function(error) {
     throw error;

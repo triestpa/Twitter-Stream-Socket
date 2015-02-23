@@ -42,8 +42,8 @@ twitterStream.controller('MainCtrl', [
 	'$scope', 'socket',
 	function($scope, socket){
 		$scope.tweets = [];
+		var i = 0;
 		socket.on('newTweet', function (tweet) {
-			console.log('emit');
 		    $scope.tweets.push(tweet);
 		});
 	}

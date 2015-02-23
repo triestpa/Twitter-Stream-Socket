@@ -32,14 +32,14 @@
 	  <h1 header>Tweets</h1>
 	</div>
 
-  <div ng-repeat="tweet in tweets track by $index" >
+  <div ng-animate="animate" ng-repeat="tweet in tweets">
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	  <div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 panelheader class="panel-title">{{$index}}</h3>
+		    <h3 panelheader class="panel-title">{{tweet.user.screen_name}}</h3>
 		  </div>
 		  <div class="panel-body">
-		    <p>{{tweet}}</p>
+		    <p>{{tweet.text}}</p>
 		  </div>
   </div>
 	</div>
